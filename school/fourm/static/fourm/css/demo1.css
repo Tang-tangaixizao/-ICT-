@@ -1,0 +1,60 @@
+#none_box{
+    text-decoration: none;
+    color: white;
+    font-family: 'Microsoft YaHei UI';
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    display: inline-block;
+    background-color: #F73F52;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+#card_footer_box > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#card_footer_box > ul > li{
+    float: left;
+    margin-left: 5px;
+}
+.btn_public_style{
+    float: left;
+    font-size: 1rem;
+    width: 100%;
+}
+#action_box1{
+    background-color: #dc3545 !important;
+	color: #fff;
+}
+#action_box2{
+    background-color: #ffc107 !important;
+	color: #fff;
+}
+@media screen and (max-width: 620px) {
+    #main_sidebar_box{
+        width: 0;
+    }
+    #sidebar-wrapper{
+        display: none;
+    }
+    #card_footer_box > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    #card_footer_box > ul > li{
+        width: 45%;
+        margin: 1%;
+    }
+    .btn_public_style{
+    float: left;
+    font-size: 1rem;
+    width: 100%;
+    }
+}
+

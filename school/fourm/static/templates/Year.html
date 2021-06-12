@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href=".././fourm/modules/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href=".././fourm/modules/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href=".././fourm/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+
+  <link rel="stylesheet" href=".././fourm/modules/summernote/summernote-lite.css">
+  <link rel="stylesheet" href=".././fourm/modules/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href=".././fourm/css/demo.css">
+  <link rel="stylesheet" href=".././fourm/css/style.css">
+</head>
+<body bgcolor="white">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+              <div class="card">
+                <sdiv class="card-header">
+                  <div class="float-right">
+                    <div class="btn-group">
+                    </div>
+                  </div>
+                </sdiv>
+                <div class="card-body">
+                  <canvas id="myChart" height="158"></canvas>
+                  <div class="statistic-details mt-sm-4">
+                    <div class="statistic-details-item">
+                      <small class="text-muted"><span class="text-primary"><i class="ion-arrow-up-b"></i></span> 7%</small>
+                      <div class="detail-value">260</div>
+                      <div class="detail-name">今天人数</div>
+                    </div>
+                    <div class="statistic-details-item">
+                      <small class="text-muted"><span class="text-danger"><i class="ion-arrow-down-b"></i></span> 23%</small>
+                      <div class="detail-value">2,902</div>
+                      <div class="detail-name">本周人数</div>
+                    </div>
+                    <div class="statistic-details-item">
+                      <small class="text-muted"><span class="text-primary"><i class="ion-arrow-up-b"></i></span>9%</small>
+                      <div class="detail-value">12,821</div>
+                      <div class="detail-name">本月人数</div>
+                    </div>
+                    <div class="statistic-details-item">
+                      <small class="text-muted"><span class="text-primary"><i class="ion-arrow-up-b"></i></span> 19%</small>
+                      <div class="detail-value">92,142</div>
+                      <div class="detail-name">今年人数</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+ <script src=".././fourm/modules/jquery.min.js"></script>
+  <script src=".././fourm/modules/popper.js"></script>
+  <script src=".././fourm/modules/tooltip.js"></script>
+  <script src=".././fourm/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src=".././fourm/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src=".././fourm/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+  <script src=".././fourm/js/sa-functions.js"></script>
+
+  <script src=".././fourm/modules/chart.min.js"></script>
+  <script src=".././fourm/modules/summernote/summernote-lite.js"></script>
+<script>
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [parent.context_time[6], parent.context_time[5], parent.context_time[4], parent.context_time[3], parent.context_time[2], parent.context_time[1], parent.context_time[0]],
+      datasets: [{
+        label: 'Statistics',
+        data: [parent.context_shidu[6],parent.context_shidu[5],parent.context_shidu[4], parent.context_shidu[3], parent.context_shidu[2], parent.context_shidu[1], parent.context_shidu[0]],
+        borderWidth: 2,
+        backgroundColor: '#ffc107',
+        borderColor: '#ffc107',
+        borderWidth: 2.5,
+        pointBackgroundColor: '#ffffff',
+        pointRadius: 4,
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            stepSize: 150,
+              max:70,
+              min:30,
+               stepSize: 10,
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }]
+      },
+    }
+  });
+</script>
+</body>
+</html>
